@@ -1,0 +1,12 @@
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/variables";
+$red : #e5563c;
+$green :#66a8a6;
+$gray:#525252;
+
+
+$custom-colors : (
+    "red" : $red ,
+    "green":$green
+);
+$theme-colors : map-merge($theme-colors , $custom-colors);

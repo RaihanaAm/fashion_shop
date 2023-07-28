@@ -1,0 +1,6 @@
+@import "./variable.scss";
+@import "../../node_modules/bootstrap/scss/bootstrap.scss"; 
+
+.active {
+    color: $red !important;
+}

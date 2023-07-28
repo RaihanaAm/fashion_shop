@@ -1,0 +1,38 @@
+.coming{
+    font-family: "poppins";
+    margin: 40px 0;
+}
+.OneComing{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 10px;
+    transition: all 0.5s;
+    img{
+        width: 240px;
+        height: 240px;
+        object-fit: cover;
+    }
+    .btnn{
+        position: absolute;
+        bottom: 6%;
+        left: 21%;
+        button{
+            border: none;
+            background-color: white;
+            height: 35px;
+            width:  140px;
+            font-size: 14px;
+            border-radius: 10px;
+        }
+        button:hover{
+            background-color: rgb(232, 232, 232);
+
+        }
+    }
+}
+.OneComing:hover{
+    transform: scale(1.1);
+
+}

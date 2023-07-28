@@ -1,0 +1,50 @@
+@import "../../../../styles/variable";
+@font-face {
+    font-family: "poppins";
+    src: url(../../../../assets/fonts/Poppins-Regular.ttf);
+}
+@font-face {
+    font-family: "black";
+    src: url(../../../../assets/fonts/Poppins-Black.ttf
+    );
+}
+.header{
+    position: relative;
+    font-family: "poppins";
+    .item{
+        position: absolute;
+        top: 30%;
+        left: 33%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        h1{
+            color: white;
+            font-size: 56px;
+            font-family: "black";
+            letter-spacing: 1px;
+            padding-bottom: 10px;
+            border-bottom: 6px solid white;
+        }
+        p{
+            color: white;
+            margin-top: 5px;
+        }
+        button{
+            margin: 5px 0;
+            border: none;
+            width:140px;
+            height: 35px; 
+            border-radius: 30px;
+            font-size: 16px;
+            background-color: white;
+        }
+        button:hover{
+            background-color:#d3d3d3;
+            color: rgb(0, 0, 0);
+        }
+  
+
+    }
+}

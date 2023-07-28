@@ -1,0 +1,72 @@
+@import "../../styles/variable";
+.Product {
+  margin: 40px 0;
+  font-family: "poppins";
+  .product {
+    .tabs {
+      display: flex ;
+      justify-content: space-evenly;
+      .left {
+        h1 {
+          font-size: 22px;
+          font-weight: 600;
+          margin-bottom: 10px;
+        }
+        .lists {
+          text-decoration: none;
+          color: $gray;
+          margin: 5px 0;
+          font-size: 15px;
+        }
+        input {
+          font-size: 14px;
+          width: 160px;
+          height: 30px;
+          padding: 0 10px;
+          border-radius: 5px;
+          outline: none;
+          border: 1px solid rgb(151, 151, 151);
+          margin: 10px 0 0;
+          color: $gray;
+        }
+        button {
+          font-size: 18px;
+          color: $red;
+          border: none;
+          background-color: transparent;
+        }
+      }
+      .right {
+        width: 800px;
+        .prod {
+          .tableu {
+            display: flex !important;
+            flex-wrap: wrap;
+          }
+        }
+      }
+    }
+  }
+}
+@media (min-width: 768px) and (max-width: 1000px) {
+  .Product {
+    margin: 40px 0;
+    font-family: "poppins";
+    .product {
+      .tabs {
+        flex-direction: column;
+        .left {
+        }
+        .right {
+          width: 700px;
+          .prod {
+            .tableu {
+              display: flex !important;
+              flex-wrap: wrap;
+            }
+          }
+        }
+      }
+    }
+  }
+}

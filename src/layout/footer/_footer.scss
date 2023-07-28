@@ -1,0 +1,98 @@
+@import "../../styles/variable";
+.footer {
+  font-family: "poppins";
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 0;
+  background-color: rgb(236, 236, 236);
+  .items {
+    width: 100%;
+    display: flex;
+
+    justify-content: space-evenly;
+    .touch {
+      width: 20%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      h4 {
+        font-size: 18px;
+        font-weight: bold;
+      }
+      .qst {
+        width: 290px;
+        font-size: 13px;
+        text-align: center;
+        color: $gray;
+      }
+      .icons {
+        p {
+          margin: 0 20px 0 0;
+          font-size: 19px;
+          color: $gray;
+        }
+        p:hover {
+          color: $red;
+        }
+      }
+    }
+  }
+  .categorie,
+  .links {
+    width: 13%;
+    display: flex;
+    align-items: start;
+    // justify-content: center;
+    flex-direction: column;
+    h4 {
+      font-size: 18px;
+      font-weight: bold;
+            text-align: center;
+
+    }
+    p {
+      margin: 5px 0px 0 0;
+      font-size: 13px;
+      color: $gray;
+            text-align: center;
+
+    }
+    p:hover {
+      color: $red;
+      cursor: pointer;
+    }
+  }
+
+  .cards {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    p {
+      margin-top: 10px;
+      font-size: 13px;
+      color: $gray;
+
+    }
+  }
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .footer {
+    .touch,
+    .categorie,
+    .links {
+      margin: 30px 0 0;
+      width: 100% !important;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+  }
+}
