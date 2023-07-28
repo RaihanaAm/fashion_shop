@@ -9,8 +9,8 @@ export const Description = (props) => {
                     <>
                         {
                             id === element.title ?
-                                <div className="ProductInfo">
-                                    <div className="items">
+                                <div className="ProductInfo ">
+                                    <div className="items ">
                                         <div >
                                             <img src={element.src} alt="" />
                                         </div>

@@ -102,3 +102,31 @@
     }
   }
 }
+
+@media (min-width: 320px) and (max-width: 1024px) {
+  .ProductInfo {
+    margin: 200px 0;
+    .items {
+      flex-direction: column !important;
+      justify-content: center;
+      align-items: center;
+      img {
+        width: 320px;
+        border-radius: 5px;
+        height: 300px;
+        object-fit: cover;
+        margin-right: 0px;
+      }
+      .item {
+        padding: 20px 0;
+        width: 70vw;
+        margin: 0px 0 40px;
+        .tag {
+          h1 {
+            font-size: 22px;
+          }
+        }
+      }
+    }
+  }
+}
