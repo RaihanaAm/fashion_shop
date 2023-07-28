@@ -23,7 +23,7 @@ export const Produit = (props) => {
                     </li>
                 </ul>
                 <div className="tab-content" id="pills-tabContent">
-                    <div className="tab-pane  fade show active" id="pills-Best_seller" role="tabpanel" aria-labelledby="pills-Best_seller-tab" tabindex="0">
+                    <div className="tab-pane  fade show active" id="pills-Best_seller" role="tabpanel" aria-labelledby="pills-Best_seller-tab" tabIndex="0">
                         <div className="items">
                             {
                                 props.best.map((element, index) =>
@@ -34,7 +34,7 @@ export const Produit = (props) => {
                             }
                         </div>
                     </div>
-                    <div className="tab-pane fade" id="pills-New" role="tabpanel" aria-labelledby="pills-New-tab" tabindex="0">
+                    <div className="tab-pane fade" id="pills-New" role="tabpanel" aria-labelledby="pills-New-tab" tabIndex="0">
                         <div className="items">
                             {
                                 props.AllProducts.map((element, index) =>
@@ -48,7 +48,7 @@ export const Produit = (props) => {
                             }
                         </div>
                     </div>
-                    <div className="tab-pane fade" id="pills-Sale" role="tabpanel" aria-labelledby="pills-Sale-tab" tabindex="0">
+                    <div className="tab-pane fade" id="pills-Sale" role="tabpanel" aria-labelledby="pills-Sale-tab" tabIndex="0">
                         <div className="items">
                             {
                                 props.AllProducts.map((element, index) =>
@@ -62,7 +62,7 @@ export const Produit = (props) => {
                             }
                         </div>
                     </div>
-                    <div className="tab-pane fade" id="pills-Old" role="tabpanel" aria-labelledby="pills-Old-tab" tabindex="0">
+                    <div className="tab-pane fade" id="pills-Old" role="tabpanel" aria-labelledby="pills-Old-tab" tabIndex="0">
                         <div className="items">
                             {
                                 props.AllProducts.map((element, index) =>

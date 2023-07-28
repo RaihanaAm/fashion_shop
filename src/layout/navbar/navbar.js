@@ -33,14 +33,18 @@ export const Nav = () => {
             </div>
 
             <div className="icons d-none d-md-flex">
-                <div className="coeur">
-                    <h5 ><MdFavoriteBorder /></h5>
-                </div>
+                <NavLink to={"/favorite"}>
+                    <div className="coeur">
+                        <h5 ><MdFavoriteBorder /></h5>
+                    </div>
+                </NavLink>
                 <div className="hr">|</div>
-                <div className="basket">
-                    <h5><AiOutlineShopping /></h5>
-                    <div className="number"><p>1</p></div>
-                </div>
+                <NavLink to={"/panier"}>
+                    <div className="basket">
+                        <h5><AiOutlineShopping /></h5>
+                        <div className="number"><p>1</p></div>
+                    </div>
+                </NavLink>
             </div>
         </nav>
     )

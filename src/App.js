@@ -80,6 +80,7 @@ export const App = () => {
     // product("CloudHopper", 245,"kids","sold",kids7),
     // product("TeddyBear Plush", 99,"kids","sold",kids8)
   ])
+  let tab = [product("MetroChic Overcoat", 127, "men", "old", men1),    product("MetroChic Overcoat", 127, "men", "old", women1)]
   const [best, setBest] = useState([
     product("Comfy Women's Casuals", 260, "women", "new", women3),
     product("ExecutiveBlend Suit", 196, "men", "new", men1),
@@ -95,9 +96,9 @@ export const App = () => {
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/product" element={<Product AllProducts={AllProducts} />} />
-        <Route path="/favorite" element={<Favorite />} />
+        <Route path="/favorite" element={<Favorite  tab={tab}/>} />
         <Route path="/panier" element={<Panier />} />
-        <Route path="/product/:id" element={<Description AllProducts={AllProducts}/>} />
+        <Route path="/product/:id" element={<Description AllProducts={AllProducts} />} />
 
 
       </Routes>
