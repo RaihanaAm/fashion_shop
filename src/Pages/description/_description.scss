@@ -1,0 +1,104 @@
+@import "../../styles/variable";
+.ProductInfo {
+  font-family: "poppins";
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .items {
+    display: flex;
+    justify-content: space-evenly;
+    img {
+      width: 320px;
+      border-radius: 5px;
+      height: 380px;
+      object-fit: cover;
+      margin-right: 40px;
+    }
+    .item {
+      padding: 20px 0;
+      width: 650px;
+      .tag {
+        display: flex;
+        justify-content: space-between;
+        h1 {
+          margin: 0 0 30px 0;
+          color: $gray;
+          font-weight: 600;
+          font-size: 28px;
+        }
+        p {
+          font-size: 14px;
+          color: white;
+          margin: 0;
+          height: 20px;
+          width: 50px;
+          text-align: center;
+          border-radius: 10px;
+          padding: 0 5px;
+        }
+      }
+      .price {
+        margin-top: 40px;
+        display: flex;
+        padding: 0;
+        justify-content: space-between;
+        .sold {
+          display: flex;
+          h4 {
+            font-size: 22px;
+            margin-right: 10px;
+          }
+        }
+      }
+      .add {
+        padding: 0px;
+        border-radius: 5px;
+        width: 100px;
+        background-color: rgb(242, 242, 242);
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        border: 1px solid rgb(242, 242, 242);
+        h1 {
+          margin: 0;
+          font-size: 22px;
+          padding: 3px 10px;
+          background-color: rgb(255, 255, 255);
+          color: rgb(0, 0, 0);
+        }
+        button {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: $gray;
+          font-weight: bold;
+          font-size: 14px;
+          width: 20px;
+          height: 20px;
+          text-align: center;
+          padding: 0;
+          border: none;
+          background-color: transparent;
+        }
+        button[disabled] {
+          color: rgba(9, 112, 0, 0.307);
+          border: 2px solid rgba(8, 96, 0, 0.363);
+        }
+      }
+      // .addToCard {
+      //   margin-top: 20px;
+      //   display: flex;
+      //   justify-content: center;
+      //   button {
+      //     background-color: rgb(56, 127, 43);
+      //     color: white;
+      //     width: 150px;
+      //     height: 40px;
+      //     border-radius: 10px;
+      //     border: none;
+      //   }
+      // }
+    }
+  }
+}

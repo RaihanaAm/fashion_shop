@@ -36,6 +36,7 @@ import men8 from "./assets/images/men/shop-item-09.jpg"
 // import kids7 from "./assets/images/kids/kid7.jpg"
 // import kids8 from "./assets/images/kids/kid8.jpg"
 import { Footer } from "./layout/footer/footer"
+import { Description } from "./Pages/description/description"
 
 
 
@@ -50,25 +51,25 @@ export const App = () => {
     type,
     src,
   })
-  const [AllProducts,setAllProducts] =useState( [
+  const [AllProducts, setAllProducts] = useState([
     //**women
     product("Fashionista's Paradise", 75, "women", "new", women1),
     product("Elegant Ensembles", 105, "women", "new", women2),
     product("Comfy Women's Casuals", 260, "women", "new", women3),
-    product("Free-Spirited Women's ", 30, "women", "sold", women4),
+    product("Free-Spirited Women's", 30, "women", "sold", women4),
     product("Athleisure Avenue", 98, "women", "sold", women5),
-    product("Women's Vintage ", 22, "women", "sold", women6),
+    product("Women's Vintage", 22, "women", "sold", women6),
     product("Women's Professional", 168, "women", "old", women7),
-    product("Women's Beachwear ", 200, "women", "old", women8),
+    product("Women's Beachwear", 200, "women", "old", women8),
     // **men
-    product("ExecutiveBlend Suit", 196,"men","new",men1),
-    product("UrbanEdge Jeans", 730,"men","new",men2),
-    product("ComfyTech Hoodie", 98,"men","new",men3),
-    product("Trailblazer Jacket", 125,"men","sold",men4),
-    product("ClassicGent Shirt", 66,"men","sold",men5),
-    product("PowerStride Shoes", 450,"men","sold",men6),
-    product("CoolBreeze Linen Shirt", 540,"men","old",men7),
-    product("MetroChic Overcoat",127 ,"men","old",men8),
+    product("ExecutiveBlend Suit", 196, "men", "new", men1),
+    product("UrbanEdge Jeans", 730, "men", "new", men2),
+    product("ComfyTech Hoodie", 98, "men", "new", men3),
+    product("Trailblazer Jacket", 125, "men", "sold", men4),
+    product("ClassicGent Shirt", 66, "men", "sold", men5),
+    product("PowerStride Shoes", 450, "men", "sold", men6),
+    product("CoolBreeze Linen Shirt", 540, "men", "old", men7),
+    product("MetroChic Overcoat", 127, "men", "old", men8),
     // *kids
     // product("TinyTots Rompers", 146,"kids","new",kids1),
     // product("CuddleCloud Onesies", 78,"kids","new",kids2),
@@ -79,49 +80,28 @@ export const App = () => {
     // product("CloudHopper", 245,"kids","sold",kids7),
     // product("TeddyBear Plush", 99,"kids","sold",kids8)
   ])
-  const [solde,setSolde]=useState([]);
-  const [news,setNews]=useState([]);
-  const [old,setOld]=useState([]);
-  useEffect(()=>{
-    let girl = [];
-    let boy = [];
-    let kid = [];
-    for (let index = 0; index < AllProducts.length; index++) {
-      let element = AllProducts[index];
-      switch (element.type) {
-        case "new":
-          girl.push(element)
-          break;
-          case "sold":
-            boy.push(element)
-          break;
-          case "old":
-            kid.push(element)
-          break;
-        default:
-          break;
-      }
-      
-    }
-    setSolde(boy)
-    setNews(girl)
-    setOld(kid)
-
-  },[AllProducts])
+  const [best, setBest] = useState([
+    product("Comfy Women's Casuals", 260, "women", "new", women3),
+    product("ExecutiveBlend Suit", 196, "men", "new", men1),
+    // product("AdventureSeeker ", 152,"kids","new",kids3),
+    product("Women's Vintage ", 22, "women", "sold", women6),
+  ])
   return (
     <div>
       <Nav />
       <Routes>
         {/* <Route path="*" element={<Error />}/> */}
-        <Route exact path="/" element={<Home AllProducts={AllProducts}  solde={solde}  news={news} old={old} />} />
+        <Route exact path="/" element={<Home AllProducts={AllProducts} best={best} />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/product" element={<Product AllProducts={AllProducts}  solde={solde}  news={news} old={old} />} />
+        <Route path="/product" element={<Product AllProducts={AllProducts} />} />
         <Route path="/favorite" element={<Favorite />} />
         <Route path="/panier" element={<Panier />} />
+        <Route path="/product/:id" element={<Description AllProducts={AllProducts}/>} />
+
 
       </Routes>
-      <Footer/>
+      <Footer />
 
     </div>
   )

@@ -24,19 +24,26 @@ export const Produit = (props) => {
                 </ul>
                 <div className="tab-content" id="pills-tabContent">
                     <div className="tab-pane  fade show active" id="pills-Best_seller" role="tabpanel" aria-labelledby="pills-Best_seller-tab" tabindex="0">
-
                         <div className="items">
-
+                            {
+                                props.best.map((element, index) =>
+                                        <>
+                                            <ComponentProduit src={element.src} price={element.price} title={element.title} type={element.type} />
+                                        </>
+                                )
+                            }
                         </div>
-
                     </div>
                     <div className="tab-pane fade" id="pills-New" role="tabpanel" aria-labelledby="pills-New-tab" tabindex="0">
                         <div className="items">
                             {
-                                props.news.map((element, index) =>
-                                    <>
-                                        <ComponentProduit src={element.src} price={element.price} title={element.title} type={element.type} />
-                                    </>
+                                props.AllProducts.map((element, index) =>
+                                    element.type === "new" ?
+                                        <>
+                                            <ComponentProduit src={element.src} price={element.price} title={element.title} type={element.type} />
+                                        </>
+                                        :
+                                        <></>
                                 )
                             }
                         </div>
@@ -44,22 +51,27 @@ export const Produit = (props) => {
                     <div className="tab-pane fade" id="pills-Sale" role="tabpanel" aria-labelledby="pills-Sale-tab" tabindex="0">
                         <div className="items">
                             {
-                                props.solde.map((element, index) =>
-                                    <>
-                                        <ComponentProduit src={element.src} price={element.price} title={element.title} type={element.type} />
-                                    </>
+                                props.AllProducts.map((element, index) =>
+                                    element.type === "sold" ?
+                                        <>
+                                            <ComponentProduit src={element.src} price={element.price} title={element.title} type={element.type} />
+                                        </>
+                                        :
+                                        <></>
                                 )
                             }
                         </div>
                     </div>
                     <div className="tab-pane fade" id="pills-Old" role="tabpanel" aria-labelledby="pills-Old-tab" tabindex="0">
                         <div className="items">
-
                             {
-                                props.old.map((element, index) =>
-                                    <>
-                                        <ComponentProduit src={element.src} price={element.price} title={element.title} type={element.type} />
-                                    </>
+                                props.AllProducts.map((element, index) =>
+                                    element.type === "old" ?
+                                        <>
+                                            <ComponentProduit src={element.src} price={element.price} title={element.title} type={element.type} />
+                                        </>
+                                        :
+                                        <></>
                                 )
                             }
                         </div>

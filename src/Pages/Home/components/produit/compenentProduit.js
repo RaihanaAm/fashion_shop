@@ -2,11 +2,14 @@ import "./_produit.scss"
 import { MdFavoriteBorder } from "react-icons/md";
 
 import img from "../../../../assets/images/blog-01.jpg"
+import { Link, NavLink } from "react-router-dom"
 export const ComponentProduit = (props) => {
     return (
         <div className="Component">
             <div>
-                <img src={props.src} alt="" />
+                <NavLink className="nav-link" to={`/product/${props.title}`}>
+                    <img src={props.src} alt="" />
+                </NavLink>
             </div>
             <div className="type">
                 <p className={props.type === "sold" ? "bg-red" : props.type === "new" ? "bg-green" : "bg-warning"}>{props.type}</p>
@@ -29,5 +32,6 @@ export const ComponentProduit = (props) => {
                 </div>
             </div>
         </div>
+
     )
 }
