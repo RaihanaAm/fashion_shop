@@ -4,7 +4,7 @@
   font-family: "poppins";
   .product {
     .tabs {
-      display: flex ;
+      display: flex;
       justify-content: space-evenly;
       .left {
         h1 {
@@ -48,23 +48,15 @@
     }
   }
 }
-@media (min-width: 768px) and (max-width: 1000px) {
+@media (min-width: 320px) and (max-width: 1024px) {
   .Product {
-    margin: 40px 0;
-    font-family: "poppins";
     .product {
       .tabs {
         flex-direction: column;
-        .left {
-        }
+        align-items: center;
+        justify-content: center;
         .right {
-          width: 700px;
-          .prod {
-            .tableu {
-              display: flex !important;
-              flex-wrap: wrap;
-            }
-          }
+          width: 70vw;
         }
       }
     }

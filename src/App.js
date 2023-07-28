@@ -27,14 +27,14 @@ import men6 from "./assets/images/men/money.jpg"
 import men7 from "./assets/images/men/shirt.jpg"
 import men8 from "./assets/images/men/shop-item-09.jpg"
 // && kids 
-import kids1 from "./assets/images/kids/kid1.jpeg"
-import kids2 from "./assets/images/kids/kid2.jpg"
-import kids3 from "./assets/images/kids/kid3.jpg"
-import kids4 from "./assets/images/kids/kid4.jpg"
-import kids5 from "./assets/images/kids/kid5.jpg"
-import kids6 from "./assets/images/kids/kid6.jpg"
-import kids7 from "./assets/images/kids/kid7.jpg"
-import kids8 from "./assets/images/kids/kid8.jpg"
+// import kids1 from "./assets/images/kids/kid1.jpeg"
+// import kids2 from "./assets/images/kids/kid2.jpg"
+// import kids3 from "./assets/images/kids/kid3.jpg"
+// import kids4 from "./assets/images/kids/kid4.jpg"
+// import kids5 from "./assets/images/kids/kid5.jpg"
+// import kids6 from "./assets/images/kids/kid6.jpg"
+// import kids7 from "./assets/images/kids/kid7.jpg"
+// import kids8 from "./assets/images/kids/kid8.jpg"
 import { Footer } from "./layout/footer/footer"
 
 
@@ -70,14 +70,14 @@ export const App = () => {
     product("CoolBreeze Linen Shirt", 540,"men","old",men7),
     product("MetroChic Overcoat",127 ,"men","old",men8),
     // *kids
-    product("TinyTots Rompers", 146,"kids","new",kids1),
-    product("CuddleCloud Onesies", 78,"kids","new",kids2),
-    product("AdventureSeeker ", 152,"kids","new",kids3),
-    product("DinoRoar T-shirts", 975,"kids","sold",kids4),
-    product("MiniExplorers Cargo ", 397,"kids","sold",kids5),
-    product("TinyTrendsetters ", 834,"kids","sold",kids6),
-    product("CloudHopper", 245,"kids","sold",kids7),
-    product("TeddyBear Plush", 99,"kids","sold",kids8)
+    // product("TinyTots Rompers", 146,"kids","new",kids1),
+    // product("CuddleCloud Onesies", 78,"kids","new",kids2),
+    // product("AdventureSeeker ", 152,"kids","new",kids3),
+    // product("DinoRoar T-shirts", 975,"kids","sold",kids4),
+    // product("MiniExplorers Cargo ", 397,"kids","sold",kids5),
+    // product("TinyTrendsetters ", 834,"kids","sold",kids6),
+    // product("CloudHopper", 245,"kids","sold",kids7),
+    // product("TeddyBear Plush", 99,"kids","sold",kids8)
   ])
   const [solde,setSolde]=useState([]);
   const [news,setNews]=useState([]);
