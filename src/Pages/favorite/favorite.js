@@ -36,7 +36,6 @@ export const Favorite = (props) => {
                         )
                     }
                 </div>
-
             </div>
         </div>
     )

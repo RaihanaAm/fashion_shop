@@ -1,8 +1,39 @@
 import "./_panier.scss"
-export const Panier =()=>{
-    return(
+import src  from "../../assets/images/panier.jpg"
+import { Header } from "../../layout/header"
+export const Panier = (props) => {
+    return (
         <div>
-            Panier
+            <Header title={"PANIER"} src={src} />
+            <div className="favorite">
+                <div className="TABTITLE">
+                    <h6 className="text-white">images</h6>
+                    <h6>PRODUCT</h6>
+                    <h6>PRICE</h6>
+                    <h6>QUANTITE</h6>
+                    <h6>TOTAL</h6>
+                </div>
+                <div className="items">
+                    {
+                        props.tab.map((element, index) =>
+                            <div className="borde">
+                                <img src={element.src} alt="" />
+                                <div className="item">
+                                    <h3>{element.title}</h3>
+                                    <h6>${element.price}.00</h6>
+                                    <div className="add">
+                                        <button onClick={() => { props.remove(element) }} disabled={props.redisabled}>-</button>
+                                        <div><h1>1</h1></div>
+                                        <button onClick={() => { props.add(element) }} disabled={props.disabled}>+</button>
+                                    </div>
+                                    <h6 className="text-red">${element.price}.00</h6>
+                                </div>
+                            </div>
+
+                        )
+                    }
+                </div>
+            </div>
         </div>
     )
 }
