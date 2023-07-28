@@ -83,6 +83,19 @@
             font-weight: 400;
             margin: 15px 0 5px;
         }
+        .tt{
+            display: flex;
+            h6{
+                margin-right: 8px;
+                color: $gray;
+                font-size: 15px;
+            }
+            .text-red{
+                font-size: 16px;
+                margin: 0;
+
+            }
+        }
     }
 }
 .tab-pane{

@@ -9,7 +9,7 @@ export const ComponentProduit = (props) => {
                 <img src={props.src} alt="" />
             </div>
             <div className="type">
-                <p className={props.type==="sold"? "bg-red" : props.type==="new"?"bg-green":"bg-warning"}>{props.type}</p>
+                <p className={props.type === "sold" ? "bg-red" : props.type === "new" ? "bg-green" : "bg-warning"}>{props.type}</p>
             </div>
             <div className="icon">
                 <p><MdFavoriteBorder /></p>
@@ -19,7 +19,14 @@ export const ComponentProduit = (props) => {
             </div>
             <div className="text">
                 <h3>{props.title}</h3>
-                <h6>${props.price}.00</h6>
+                <div className="tt">
+                    <h6 className={props.type === "sold" ? "text-decoration-line-through" : ""}>${props.price}.00 </h6>
+                    {props.type === "sold" ?
+                        <h6 className="text-red" >${Math.round(props.price * 0.4)}.00</h6>
+                        : <></>
+                    }
+
+                </div>
             </div>
         </div>
     )
