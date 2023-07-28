@@ -44,12 +44,14 @@ import { Description } from "./Pages/description/description"
 
 
 export const App = () => {
-  const product = (title, price, categorie, type, src) => ({
+  const product = (title, price, categorie, type, src, qnt, stock) => ({
     title,
     price,
     categorie,
     type,
     src,
+    qnt: 1,
+    stock: 2,
   })
   const [AllProducts, setAllProducts] = useState([
     //**women
@@ -80,24 +82,49 @@ export const App = () => {
     // product("CloudHopper", 245,"kids","sold",kids7),
     // product("TeddyBear Plush", 99,"kids","sold",kids8)
   ])
-  let tab = [product("MetroChic Overcoat", 127, "men", "old", men1),    product("MetroChic Overcoat", 127, "men", "old", women1)]
   const [best, setBest] = useState([
     product("Comfy Women's Casuals", 260, "women", "new", women3),
     product("ExecutiveBlend Suit", 196, "men", "new", men1),
     // product("AdventureSeeker ", 152,"kids","new",kids3),
-    product("Women's Vintage ", 22, "women", "sold", women6),
-  ])
+    product("Women's Vintage ", 22, "women", "sold", women6),])
+
+  let [favorite, setFavorite] = useState([])
+  let [panier, setPanier] = useState([])
+  const addStock = (index) => {
+    const newProducts = [...AllProducts];
+    const newPanier = [...panier];
+    if (newProducts[index].stock === 0) {
+      alert("Il n'y a plus de produit");
+    } else {
+      newProducts[index].stock -= 1;
+
+      const existingProduct = newPanier.find(
+        (element) => element.title === newProducts[index].title
+      );
+console.log(existingProduct);
+      if (existingProduct === undefined) {
+        newPanier.push(newProducts[index]);
+        console.log(newProducts[index]);
+
+      } else {
+        existingProduct.qnt += 1;
+      }
+      
+      setPanier(newPanier);
+      setAllProducts(newProducts);
+    }
+  }
   return (
     <div>
-      <Nav />
+      <Nav tab={panier} />
       <Routes>
         {/* <Route path="*" element={<Error />}/> */}
-        <Route exact path="/" element={<Home AllProducts={AllProducts} best={best} />} />
+        <Route exact path="/" element={<Home AllProducts={AllProducts} best={best} addStock={addStock} />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/product" element={<Product AllProducts={AllProducts} />} />
-        <Route path="/favorite" element={<Favorite  tab={tab}/>} />
-        <Route path="/panier" element={<Panier tab={tab} />} />
+        <Route path="/favorite" element={<Favorite tab={favorite} />} />
+        <Route path="/panier" element={<Panier tab={panier} />} />
         <Route path="/product/:id" element={<Description AllProducts={AllProducts} />} />
 
 

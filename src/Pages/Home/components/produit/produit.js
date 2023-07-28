@@ -27,9 +27,9 @@ export const Produit = (props) => {
                         <div className="items">
                             {
                                 props.best.map((element, index) =>
-                                        <>
-                                            <ComponentProduit src={element.src} price={element.price} title={element.title} type={element.type} />
-                                        </>
+                                    <>
+                                        <ComponentProduit src={element.src} price={element.price} title={element.title} type={element.type} addStock={props.addStock}   index={index}/>
+                                    </>
                                 )
                             }
                         </div>
@@ -40,7 +40,7 @@ export const Produit = (props) => {
                                 props.AllProducts.map((element, index) =>
                                     element.type === "new" ?
                                         <>
-                                            <ComponentProduit src={element.src} price={element.price} title={element.title} type={element.type} />
+                                        <ComponentProduit src={element.src} price={element.price} title={element.title} type={element.type} addStock={props.addStock} index={index} />
                                         </>
                                         :
                                         <></>
@@ -54,7 +54,7 @@ export const Produit = (props) => {
                                 props.AllProducts.map((element, index) =>
                                     element.type === "sold" ?
                                         <>
-                                            <ComponentProduit src={element.src} price={element.price} title={element.title} type={element.type} />
+                                        <ComponentProduit src={element.src} price={element.price} title={element.title} type={element.type} addStock={props.addStock} index={index} />
                                         </>
                                         :
                                         <></>
@@ -68,7 +68,7 @@ export const Produit = (props) => {
                                 props.AllProducts.map((element, index) =>
                                     element.type === "old" ?
                                         <>
-                                            <ComponentProduit src={element.src} price={element.price} title={element.title} type={element.type} />
+                                            <ComponentProduit src={element.src} price={element.price} title={element.title} type={element.type} addStock={props.addStock} index={index} />
                                         </>
                                         :
                                         <></>

@@ -1,5 +1,5 @@
 import "./_panier.scss"
-import src  from "../../assets/images/panier.jpg"
+import src from "../../assets/images/panier.jpg"
 import { Header } from "../../layout/header"
 export const Panier = (props) => {
     return (
@@ -7,11 +7,19 @@ export const Panier = (props) => {
             <Header title={"PANIER"} src={src} />
             <div className="favorite">
                 <div className="TABTITLE">
-                    <h6 className="text-white">images</h6>
-                    <h6>PRODUCT</h6>
-                    <h6>PRICE</h6>
-                    <h6>QUANTITE</h6>
-                    <h6>TOTAL</h6>
+                    {
+                        props.tab.length === 0 ?
+                            <></>
+                            :
+                            <>
+                                <h6 className="text-white">images</h6>
+                                <h6>PRODUCT</h6>
+                                <h6>PRICE</h6>
+                                <h6>QUANTITE</h6>
+                                <h6>TOTAL</h6>
+                                <h6>ADD</h6>
+                            </>
+                    }
                 </div>
                 <div className="items">
                     {
@@ -23,10 +31,10 @@ export const Panier = (props) => {
                                     <h6>${element.price}.00</h6>
                                     <div className="add">
                                         <button onClick={() => { props.remove(element) }} disabled={props.redisabled}>-</button>
-                                        <div><h1>1</h1></div>
+                                        <div><h1>{element.qnt}</h1></div>
                                         <button onClick={() => { props.add(element) }} disabled={props.disabled}>+</button>
                                     </div>
-                                    <h6 className="text-red">${element.price}.00</h6>
+                                    <h6 className="text-red">${element.price*element.qnt}.00</h6>
                                 </div>
                             </div>
 

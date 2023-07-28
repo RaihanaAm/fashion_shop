@@ -17,8 +17,10 @@ export const ComponentProduit = (props) => {
             <div className="icon">
                 <p><MdFavoriteBorder /></p>
             </div>
-            <div className="add d-none">
-                <button>Add to cart</button>
+            <div className="add ">
+                <button onClick={() => {
+                    props.addStock(props.index)
+                }}>Add to cart</button>
             </div>
             <div className="text">
                 <h3>{props.title}</h3>

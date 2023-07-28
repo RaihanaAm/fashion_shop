@@ -32,7 +32,7 @@ export const Description = (props) => {
                                                 </div>
                                                 <div className="add">
                                                     <button onClick={() => { props.remove(element) }} disabled={props.redisabled}>-</button>
-                                                    <div><h1>1</h1></div>
+                                                    <div><h1>{element.qnt}</h1></div>
                                                     <button onClick={() => { props.add(element) }} disabled={props.disabled}>+</button>
                                                 </div>
                                             </div>

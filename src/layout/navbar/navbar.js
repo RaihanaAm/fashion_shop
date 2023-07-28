@@ -2,7 +2,8 @@ import "./_navbar.scss"
 import { Link, NavLink } from "react-router-dom"
 import { MdFavoriteBorder } from "react-icons/md";
 import { AiOutlineShopping } from "react-icons/ai";
-export const Nav = () => {
+export const Nav = (props) => {
+    
     return (
 
         <nav className="navitem  ">
@@ -42,7 +43,7 @@ export const Nav = () => {
                 <NavLink to={"/panier"}>
                     <div className="basket">
                         <h5><AiOutlineShopping /></h5>
-                        <div className="number"><p>1</p></div>
+                        <div className="number"><p>{props.tab.length}</p></div>
                     </div>
                 </NavLink>
             </div>

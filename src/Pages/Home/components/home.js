@@ -8,7 +8,7 @@ export const Home =(props)=>{
         <div className="Home">
             <Header/>
             <ComingSoon/>
-            <Produit  AllProducts={props.AllProducts} best ={props.best}/>
+            <Produit  AllProducts={props.AllProducts} best ={props.best} addStock={props.addStock}/>
             <LookBook />
         </div>
     )
